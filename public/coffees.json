@@ -35,7 +35,7 @@
     "description": "A classic Italian coffee drink made with equal parts espresso, steamed milk, and milk foam.",
     "making_process": "Prepare a shot of espresso. Steam milk to create microfoam. Pour the steamed milk over the espresso, followed by the milk foam on top. Optionally, sprinkle with cocoa powder or cinnamon.",
     "rating": 4.7,
-    "popularity": 92
+    "popularity": 95
   },
   {
     "id": 3,
@@ -53,7 +53,7 @@
     "type": "Creamy",
     "description": "A smooth and creamy coffee made with espresso and a generous amount of steamed milk.",
     "making_process": "Brew a shot of espresso. Steam milk to create a velvety texture. Pour the steamed milk over the espresso, leaving a small amount of foam to top. Optionally, add flavored syrups.",
-    "rating": 4.8,
+    "rating": 5.3,
     "popularity": 95
   },
   {
@@ -72,7 +72,7 @@
     "type": "Strong",
     "description": "A simple coffee drink made by diluting espresso with hot water.",
     "making_process": "Brew one or two shots of espresso. Pour hot water over the espresso in a cup, adjusting the water to achieve your preferred strength.",
-    "rating": 4.3,
+    "rating": 5.1,
     "popularity": 83
   },
   {
@@ -96,7 +96,7 @@
     "type": "Sweet",
     "description": "A delicious blend of espresso, steamed milk, and rich chocolate, topped with whipped cream.",
     "making_process": "Brew a shot of espresso. In a cup, combine espresso with chocolate syrup. Steam milk and pour it over the espresso mixture. Top with whipped cream and drizzle with additional chocolate syrup.",
-    "rating": 4.6,
+    "rating": 4.0,
     "popularity": 90
   },
   {
@@ -134,13 +134,13 @@
     "type": "Creamy",
     "description": "A velvety coffee drink made with espresso and microfoam milk.",
     "making_process": "Brew a double shot of espresso. Steam milk to create a smooth microfoam. Pour the milk over the espresso, aiming for a creamy blend without a thick layer of foam.",
-    "rating": 4.5,
+    "rating": 5.5,
     "popularity": 87
   },
   {
     "id": 8,
     "name": "Affogato",
-    "image": "https://i.ibb.co.com/rvFz4NW/unnamed-be2775a1-186d-40c1-b094-488fa5fa4050.webp",
+    "image": "https://i.ibb.co.com/6XPk3nf/espresso.webp",
     "category": "Dessert Coffee",
     "ingredients": ["Espresso", "Vanilla Ice Cream"],
     "nutrition_info": {
@@ -153,8 +153,8 @@
     "type": "Sweet",
     "description": "A delightful dessert combining hot espresso poured over cold vanilla ice cream.",
     "making_process": "Scoop vanilla ice cream into a bowl or glass. Brew a shot of espresso and pour it directly over the ice cream. Serve immediately with a spoon.",
-    "rating": 4.9,
-    "popularity": 94
+    "rating": 2.9,
+    "popularity": 97
   },
   {
     "id": 9,
@@ -191,7 +191,7 @@
     "type": "Smooth",
     "description": "Cold brew coffee infused with nitrogen for a creamy, frothy texture.",
     "making_process": "Brew cold brew coffee as usual. Transfer to a nitro coffee keg and infuse with nitrogen gas. Serve straight from the tap into a glass, creating a foamy head.",
-    "rating": 4.8,
+    "rating": 3.9,
     "popularity": 93
   },
   {
@@ -216,7 +216,7 @@
   {
     "id": 12,
     "name": "Irish Coffee",
-    "image": "https://i.ibb.co.com/rvFz4NW/unnamed-be2775a1-186d-40c1-b094-488fa5fa4050.webp",
+    "image": "https://i.ibb.co.com/k0TxTTM/JJ-1808-Q2-Drinks-Shoot-0622-Web-975-730-5.webp",
     "category": "Dessert Coffee",
     "ingredients": ["Coffee", "Irish Whiskey", "Sugar", "Whipped Cream"],
     "nutrition_info": {
@@ -229,7 +229,7 @@
     "type": "Sweet",
     "description": "A warm, comforting coffee drink mixed with Irish whiskey and topped with whipped cream.",
     "making_process": "Brew a strong cup of coffee. In a glass, combine hot coffee, Irish whiskey, and sugar, stirring until dissolved. Top with a thick layer of whipped cream, serving warm.",
-    "rating": 4.7,
-    "popularity": 90
+    "rating": 3.7,
+    "popularity": 99
   }
 ]

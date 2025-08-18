@@ -1,8 +1,11 @@
-import React from "react";
+import { Link } from "react-router-dom";
+
+ 
+ 
 
 const Cards = ({ card }) => {
   // console.log(card)
-  const { image, name, category, type, rating, popularity } = card || {};
+  const {id, image, name, category, type, rating, popularity } = card || {};
   return (
     <div>
       <div className=" bg-base-200 rounded-md p-3">
@@ -22,9 +25,9 @@ const Cards = ({ card }) => {
           <p>Rating : {rating} </p>
           <p>Popularity : {popularity} </p>
 
-          <div className="card-actions mt-2">
+          <Link to={`/coffee/${id}`} className="card-actions mt-2">
             <button className="btn btn-primary">Details</button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLoaderData, useParams } from 'react-router-dom';
+import { NavLink, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import Cards from './Cards';
  
 
 const CoffeeCards = () => {
+    const navigate = useNavigate();
     const {category} = useParams();
     const data = useLoaderData();
      const [coffees, setCoffees] = useState([]);
@@ -25,7 +26,7 @@ const CoffeeCards = () => {
             }
         </div>
         <div className='mt-6 text-right mb-3'>
-           <NavLink to='/coffees'>  <button className='btn btn-info'>View All</button></NavLink>
+              <button onClick={()=> navigate('/coffees')} className='btn btn-info'>View All</button> 
         </div>
         </>
     );

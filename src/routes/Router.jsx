@@ -5,7 +5,8 @@ import Home from "../pages/Home";
 import Coffees from "../pages/Coffees";
 import Dashboard from "../pages/Dashboard";
 import CoffeeCards from "../components/CoffeeCards";
-import Cards from "../components/Cards";
+ 
+import CardsDetails from "../components/CardsDetails";
  
 
  const router = createBrowserRouter([
@@ -21,12 +22,13 @@ import Cards from "../components/Cards";
                 children:[
                     
                     {
-                        path:'/category/:category',
+                        path:'/',
                         element:<CoffeeCards></CoffeeCards>,
                         loader: ()=> fetch(`../coffees.json`)
                     },
+                     
                     {
-                        path:'/',
+                        path:'/category/:category',
                         element:<CoffeeCards></CoffeeCards>,
                         loader: ()=> fetch(`../coffees.json`)
                     },
@@ -40,11 +42,17 @@ import Cards from "../components/Cards";
                 loader: ()=> fetch(`../coffees.json`)
                 
             },
+           
             {
                 path:'/dashboard',
                 element: <Dashboard></Dashboard>,
                 
             },
+             {
+                        path:'/coffee/:id',
+                        loader: ()=> fetch(`../coffees.json`),
+                        element:<CardsDetails></CardsDetails>
+                     },
         ],
     }
  ])
