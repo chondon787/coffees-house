@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
+ 
+import { FaRegTrashAlt } from "react-icons/fa";
  
  
 
-const Cards = ({ card }) => {
+const Cards = ({ card,handleRemove  }) => {
   // console.log(card)
+  const {pathname}= useLocation()
+  
+   
+   
   const {id, image, name, category, type, rating, popularity } = card || {};
   return (
-    <div>
-      <div className=" bg-base-200 rounded-md p-3">
+    <div className=" ">
+      <div className=" bg-base-200 rounded-md p-3 relative">
         <figure className="     transition hover:scale-105">
           <img
             src={image}
@@ -29,6 +35,9 @@ const Cards = ({ card }) => {
             <button className="btn btn-primary">Details</button>
           </Link>
         </div>
+      {
+         pathname === '/dashboard' && <div onClick={()=> handleRemove(id)}  className="absolute hover:scale-125 top-0 cursor-pointer right-0 bg-warning rounded-full p-2"><FaRegTrashAlt /></div>
+      }
       </div>
     </div>
   );

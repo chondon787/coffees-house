@@ -1,16 +1,29 @@
  import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import {  addFavoriteList, getFavoriteList } from '../utilitise/utilitise';
  
  const CardsDetails = () => {
     const data = useLoaderData();
     const {id} = useParams();
     const [coffee, setCoffee] = useState({})
+    const [isFavorite, setIsFavorite]= useState(false);
     useEffect(()=>{
         const sigelData = data.find(coffee=> coffee.id == id);
         setCoffee(sigelData)
+        const favorites = getFavoriteList();
+        const existList = favorites.find(item => item.id == sigelData.id)
+        if(existList){
+            setIsFavorite(true)
+        }
     },[data,id])
 
      const {name,description,rating,popularity,image,category,making_process,  ingredients,nutrition_info} = coffee
+
+     function handleFavorite(coffee){
+        addFavoriteList(coffee)
+        setIsFavorite(true)
+     }
+
     return (
         <div>
              
@@ -27,7 +40,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
                     <p className='font-bold'>Popularity : {popularity}</p>
                     <p className='font-bold'>Rating : {rating}</p>
                 </div>
-                 <button  className='btn text-white btn-info'>Add Favorite</button>
+                 <button disabled={isFavorite} onClick={() => handleFavorite(coffee)} className='btn text-white btn-info'>Add Favorite</button>
              </div>
              <div className='mt-6'>
                 <p><span className='text-2xl font-thin'>Making_Progress :</span> <br /> {making_process}</p>
